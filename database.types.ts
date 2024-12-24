@@ -27,6 +27,30 @@ export type Database = {
         }
         Relationships: []
       }
+      messages: {
+        Row: {
+          content: string | null
+          created_at: string
+          id: number
+          user_id: string | null
+          username: string | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string
+          id?: number
+          user_id?: string | null
+          username?: string | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string
+          id?: number
+          user_id?: string | null
+          username?: string | null
+        }
+        Relationships: []
+      }
       notes: {
         Row: {
           created_at: string

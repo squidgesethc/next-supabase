@@ -1,0 +1,106 @@
+.sent {
+    background-color: #001aff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+    @apply text-background;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+.received {
+    background-color: #ff0000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+    @apply text-background;
+    align-self: flex-start;
+    cursor: default;
+}
+.message {
+    display: flex;
+    align-items: center;
+}
+.sent:hover{
+    text-decoration: line-through;
+}
+.chatheader{
+    height: 10vh;
+    width: 50vw;
+    background-color: #18112e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.chat_room{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 1rem;
+    background-color: #0d091b;
+}
+.chat_form {
+    display : flex;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 10vh;
+    background-color: #18112e;
+}
+.chat_input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: #18112e;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+.chat_input:invalid{
+    border: 1px;
+    border-color: red;
+}
+.chat_input:focus{
+    outline: none;
+}
+.chat_send{
+    width: 20%;
+    height: 100%;
+    border: none;
+    background-color: #140f27;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition-duration: 200ms;
+}
+.chat_send:hover {
+    background-color: #241a46;
+}
+.chat_send:active{
+    background-color: #0d091b;
+}
+@media  screen and (max-width: 768px) {
+    .chat_room{
+        width: 100vw;
+    }
+    .chat_form {
+        width: 100vw;
+    }
+    .chatheader{
+        width: 100vw;
+    }
+    
+}
+

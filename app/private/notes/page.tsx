@@ -21,13 +21,7 @@ export default async function NotePage() {
             <ul className='flex flex-col items-center'>
                 {
                 notes.map(note => 
-                //<div>
-                    //<li key={note.id} className='border p-2 m-2'>{note.note}</li>
-                    //<form>
-                        //<button >Delete this!</button>
-                        //<input type='hidden' name='noteID' value={note.id}/>
-                    //</form>
-                //</div>
+                
                 <Note note={note.note} noteID={note.id} deleteNote={deleteNote} />
             )
                 }

@@ -27,7 +27,8 @@ export default async function Home() {
           <button formAction={addUsername}>Add Username</button>
         </form>
         }
-        <Link href="/private/notes">Go to Your Notes</Link>
+        <Link href="/private/notes">Go to Your Notes</Link><br />
+        {username && <Link href="/private/chatroom">Go to the chatroom</Link>}
       </main>
     </>
   );

@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      width: {
+        "half-screen": "50vw",
+      }
     },
   },
   plugins: [],
