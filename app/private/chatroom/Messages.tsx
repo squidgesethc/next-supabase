@@ -19,7 +19,7 @@ export function Messages(
 ){
     const supabase = createClient();
     const [messageList, setMessageList] = useState<Message[]>(messages);
-    const [username, setUsername] = useState<String | null | undefined>("");
+    const [username, setUsername] = useState<string | null | undefined>("");
     useEffect(() => {
         
         const channel = supabase.channel('messages_insert').on('postgres_changes', {
