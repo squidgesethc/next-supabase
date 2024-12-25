@@ -12,7 +12,7 @@ export async function login(formData: FormData){
     const {error} = await supabase.auth.signInWithPassword(data)
     if (error){
         console.error(error)
-        redirect('/error')
+        redirect(`/login?error=${error}`)
     }
     console.log("Should be logged in")
     revalidatePath("/", 'layout')
@@ -29,7 +29,10 @@ export async function signUp(formData: FormData){
     const {error} = await supabase.auth.signUp(data)
     if (error){
         console.log(error)
-        redirect('/error')
+        if(error.message.includes('Invalid login')){
+            redirect(`/error?error=Invalid login credentials`)
+        }
+        redirect(`/login?error=${error}`)
     }
     revalidatePath("/", 'layout')
     redirect("/")
