@@ -5,7 +5,7 @@ This is just a side project I am working on at the moment. If you want you can c
 
 This project uses [`supabase`](https://supabase.com) and is hosted on [`vercel`](https://vercel.com).
 
-You can find this site over [here](next-supabase-phi.vercel.app)
+You can find this site over [here](https://next-supabase-phi.vercel.app)
 
 
 
