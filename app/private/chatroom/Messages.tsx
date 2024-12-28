@@ -68,6 +68,7 @@ export function Messages(
         <>
         <header className={styles.chatheader}>
             <h1 className="text-2xl">Welcome to the Chatroom {username}</h1>
+            <h3>Messages will be automatically deleted after 24 hours</h3>
             <button onClick={() => router.back()}>Back</button>
         </header>
         <ul className={styles.chat_room}>

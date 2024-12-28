@@ -1,0 +1,3 @@
+.dialog[open]::backdrop {
+    filter: blur(10px);
+}
