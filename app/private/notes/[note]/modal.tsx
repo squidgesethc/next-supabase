@@ -5,9 +5,11 @@ import { useRef, useState } from "react";
 import styles from './modal.module.css'
 export function Modal({Note} : {Note: {note: string, noteID: number}}){
     const modal = useRef<HTMLDialogElement>(null);
-    const [formValue, setFormValue] = useState('');
+    const [formValue, setFormValue] = useState(Note.note);
     const updateHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormValue(e.target.value);
+        if(e.target.value){
+            setFormValue(e.target.value);
+        }
     }
     const toggleModal = (open : boolean) => {
         if (open) modal.current?.showModal();
