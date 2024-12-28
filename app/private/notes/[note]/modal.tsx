@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import styles from './modal.module.css'
 export function Modal({Note} : {Note: {note: string, noteID: number}}){
     const modal = useRef<HTMLDialogElement>(null);
-    const [formValue, setFormValue] = useState(Note.note);
+    const [formValue, setFormValue] = useState("");
     const updateHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         if(e.target.value){
             setFormValue(e.target.value);
